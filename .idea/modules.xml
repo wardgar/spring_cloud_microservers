@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api_gateway/api_gateway.iml" filepath="$PROJECT_DIR$/api_gateway/api_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_consumer/service_consumer.iml" filepath="$PROJECT_DIR$/service_consumer/service_consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_consumer_ribbon/service_consumer_ribbon.iml" filepath="$PROJECT_DIR$/service_consumer_ribbon/service_consumer_ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_provider/service_provider.iml" filepath="$PROJECT_DIR$/service_provider/service_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service_register/service_register.iml" filepath="$PROJECT_DIR$/service_register/service_register.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_cloud_microservers.iml" filepath="$PROJECT_DIR$/spring_cloud_microservers.iml" />
+    </modules>
+  </component>
+</project>

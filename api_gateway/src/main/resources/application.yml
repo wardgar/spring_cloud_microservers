@@ -1,0 +1,32 @@
+server:
+  port: 10000
+
+#服务名
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      routes:
+        - id:  service-feign  #每个router都需要一个唯一的id
+          uri: lb://SERVICE-FEIGN # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
+          predicates:
+            - Path=/service/**  # 重点！转发该路径！,/userapi/**,
+          filters:
+            - StripPrefix=1
+        - id:  service-ribbon  #每个router都需要一个唯一的id
+          uri: lb://SERVICE-RIBBON # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
+          predicates:
+            - Path=/service/**  # 重点！转发该路径！,/userapi/**,
+          filters:
+            - StripPrefix=1
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10110/eureka/
